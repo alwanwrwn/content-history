@@ -17,7 +17,7 @@ class ContentController extends Controller
         }
     
         if (!empty($videoId)) {
-            $apiUrl = "https://www.googleapis.com/youtube/v3/videos?id=$videoId&part=snippet&key=AIzaSyDlGEQJSK83LE3-ZNZzT2mcUWZAMRkJhtc";
+            $apiUrl = "https://www.googleapis.com/youtube/v3/videos?id=$videoId&part=snippet&key=". env('YOUTUBE_API');
     
             $json = file_get_contents($apiUrl);
     
